@@ -3,17 +3,23 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
   	font-size: 1.2rem;
-  	padding: 5rem;
+    padding: 5rem;
+    
+
 
     &__text {
         color: $color-white;
-        margin-right: 5rem;
         transition: all .2s;
+        transform: translateY(100%) translateX(20%);
+
+        @include respond(tab-port) {
+          transform: translateY(-100%) translateX(20%);
+      }
 
     }
 
     &__text:hover {
-        transform: scale(1.2);
+        transform: translateY(100%) translateX(20%) scale(1.2);
     }
 
     &__link:link,
