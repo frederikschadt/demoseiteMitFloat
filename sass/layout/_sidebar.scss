@@ -3,6 +3,10 @@
   padding: 10rem 5rem;
 
 
+  @include respond(tab-port) { // width < 900?
+    padding: 5rem 5rem;
+}
+
   &__paragraph {
     font-size: 1.6rem;
     margin-bottom: 2rem;
@@ -11,15 +15,18 @@
 
 .gallery {
     padding: 1.5rem;
-
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     transition: all 2s;
+    position: relative;
 
     @include respond(tab-port) { // width < 900?
         padding: 5rem;
     }
 
     &__item {
-
+      
       &:hover {
         transform: scale(1.3);
       }
@@ -35,10 +42,5 @@
        height: 10rem;
        object-fit: cover;
        display: block;
-
-       @include respond(tab-port) {
-        width: 8rem;
-        height: 8rem;
-    }
     }
 }

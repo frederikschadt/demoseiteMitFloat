@@ -6,7 +6,6 @@
     padding: 5rem;
     
 
-
     &__text {
         color: $color-white;
         transition: all .2s;
@@ -14,12 +13,18 @@
 
         @include respond(tab-port) {
           transform: translateY(-100%) translateX(20%);
+          margin-top: 5rem;
       }
 
     }
 
     &__text:hover {
         transform: translateY(100%) translateX(20%) scale(1.2);
+
+        @include respond(tab-port) {
+          transform: translateX(20%) scale(1.2);
+
+      }
     }
 
     &__link:link,
@@ -32,6 +37,10 @@
       padding: 1.5rem;
       display: block;
       transition: all .2s;
+
+      @include respond(tab-port) {
+        margin-top: 2rem;
+    }
     }
 
     &__link:hover,
